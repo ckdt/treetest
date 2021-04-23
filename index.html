@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MyPayter Domain Tree Prototype</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+    * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+    body{
+     
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .navigation{
+      height: 64px;
+      background:hsla(200, 100%, 50%, 1);
+    }
+    .panel{
+      width:256px;
+      background: #F1F2F3;
+      margin:0;
+      padding:0;
+
+      margin-left:-12px;
+    }
+    ul{
+      width:100%;
+      list-style-type: none;
+      margin:0;
+      padding:0;
+
+    }
+    li{
+      margin:0;
+      padding:0;
+      padding-left:12px;
+      
+    }
+
+    .panel--item:hover{
+      background:red;
+    }
+    
+    .panel--item{
+      color:#464953;
+      font-size: 12.64px;
+      font-weight: normal;
+      margin-left:0;
+      background:yellow;
+    }
+    .item--wrap{
+      width:100%;
+      line-height: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+    }
+      .item--prefix{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+      .item--label{
+        flex:1;
+        padding-left:8px;
+      }
+      .item--suffix{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+      .icon--plus{
+        background-image: url(img/plus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .icon--minus{
+        background-image: url(img/minus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .icon--pin{
+        background-image: url(img/pin.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .is-open{
+        font-weight: bold;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+
+      </nav>
+    </header>
+    <aside id="sidebar">
+
+  
+<ul class="panel l0">   
+<li class="panel--item is-open">
+  <div class="item--wrap">
+    <span class="item--prefix icon--minus"></span>
+    <p class="item--label">Curo</p>
+    <span class="item--suffix icon--pin"></span>
+  </div>
+  <ul class="l1">
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Apple</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Bank of America</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Global Coffee</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    
+      <ul class="l2">
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Nederland</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Edu</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        
+          <ul class="l3">
+            <li class="panel--item">
+              <div class="item--wrap">
+                <span class="item--prefix icon--minus"></span>
+                <p class="item--label">TU Delft</p>
+                <span class="item--suffix icon--pin"></span>
+              </div>
+            </li>
+            <li class="panel--item">
+              <div class="item--wrap">
+                <span class="item--prefix icon--minus"></span>
+                <p class="item--label">TU Eindhoven</p>
+                <span class="item--suffix icon--pin"></span>
+              </div>
+            </li>
+            <li class="panel--item">
+              <div class="item--wrap">
+                <span class="item--prefix icon--minus"></span>
+                <p class="item--label">The Hague University</p>
+                <span class="item--suffix icon--pin"></span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Corporate</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Deutschland</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee UK</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee France</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Scandinavia</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+        <li class="panel--item">
+          <div class="item--wrap">
+            <span class="item--prefix icon--minus"></span>
+            <p class="item--label">Global Coffee Australia</p>
+            <span class="item--suffix icon--pin"></span>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">IBM</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">L'Orléal</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Louis Vuitton</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">McDonald's</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Mitshubishi</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">Starbucks</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    <li class="panel--item">
+      <div class="item--wrap">
+        <span class="item--prefix icon--minus"></span>
+        <p class="item--label">The Walt Disney Company</p>
+        <span class="item--suffix icon--pin"></span>
+      </div>
+    </li>
+    </ul> 
+  </li>
+</ul>   
+
+
+
+
+
+
+
+      <ul class="panel">
+        <li class="panel--item">
+          <span class="item--prefix"></span>
+          <p class="item--label">Curo</p>
+          <span class="item--suffix icon--pin"></span>
+        </li>
+      </ul>
+    </aside>
+    <div class="content">
+      
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+
+  <script type="text/javascript">
+  
+  </script>
+</html>

@@ -1,3 +1,16 @@
+const sidebarButton = document.querySelector('.js-opensidebar');
+
+sidebarButton.addEventListener('click', event => {
+  let sb = document.querySelector('.sidebar');
+  sb.classList.toggle('is-open');
+  if (sb.classList.contains('is-open')) {
+    document.getElementById('search').focus();
+  }
+
+  let panel = document.querySelector('.bc-panel');
+  panel.classList.toggle('is-moved');
+});
+
 const items = document.querySelectorAll('.item-active');
 
 items.forEach(el =>

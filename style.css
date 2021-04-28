@@ -102,6 +102,10 @@ li{
 .navigation{
   height: 64px;
   background:hsla(200, 100%, 50%, 1);
+  background-image:url(img/navbar.png);
+  background-repeat: no-repeat;
+  background-size:1440px;
+  background-position: 0 0;
 }
 
 .panel{
@@ -126,8 +130,12 @@ li{
 .item.is-showing{
   display: flex;
 }
+
 .item:hover{
   cursor: pointer;
+  background: #E3E4E8;
+}
+.item.item-active:hover{
   background: #CCEEFF;
 }
 .item:hover .suffix::after{
@@ -136,6 +144,16 @@ li{
   width:12px;
   height: 12px;
   background-image: url(img/pin.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.js-curo:hover .suffix::after{
+  content: "";
+  display: inline-block;
+  width:12px;
+  height: 12px;
+  background-image: none !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -204,3 +222,39 @@ li{
 .d-2{padding-left:36px;}
 .d-3{padding-left:44px;}
 .d-4{padding-left:52px;}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 360px;
+  background-color: #03217C;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 17%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #03217C transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

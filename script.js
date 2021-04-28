@@ -1,48 +1,103 @@
-const sidebarButton = document.querySelector('.js-opensidebar');
+const sideBar = document.querySelector('.sidebar');
+const breadCrumbList = document.querySelector('.bc-panel');
+const sbToggle = document.querySelectorAll('.js-sbbutton');
+const searchField = document.getElementById('search');
+let isOpen = false;
+let curoShowing = true;
+let gcShowing = true;
+let gcnlShowing = true;
+let gceduShowing = true;
 
-sidebarButton.addEventListener('click', event => {
-  let sb = document.querySelector('.sidebar');
-  sb.classList.toggle('is-open');
-  if (sb.classList.contains('is-open')) {
-    document.getElementById('search').focus();
-  }
-
-  let panel = document.querySelector('.bc-panel');
-  panel.classList.toggle('is-moved');
-});
-
-const items = document.querySelectorAll('.item-active');
-
-items.forEach(el =>
-  el.addEventListener('click', event => {
-    var t = '';
-
-    if (el.classList.contains('d-0')) {
-      // apply .is-showing class on current and on d-1
-      t = '.d-1';
-    }
-    if (el.classList.contains('d-1')) {
-      // apply .is-showing class on current and on d-2
-      console.log('show depth 2');
-      t = '.d-2';
-    }
-    if (el.classList.contains('d-2')) {
-      // apply .is-showing class on current and on d-3
-      console.log('show depth 3');
-      t = '.d-3';
-    }
-    if (el.classList.contains('d-3')) {
-      // apply .is-showing class on current and on d-4
-      console.log('show depth 4');
-      t = '.d-4';
-    }
-
-    el.classList.toggle('is-open');
-
-    let sub = document.querySelectorAll(t);
-    sub.forEach(el => {
-      el.classList.toggle('is-showing');
-    });
-    console.log(sub, 'show depth 1');
+sbToggle.forEach(el =>
+  el.addEventListener('click', e => {
+    toggleSidebar();
   })
 );
+
+function toggleSidebar() {
+  // open Sidebar
+  sideBar.classList.toggle('is-open');
+  // move Breadcrumb
+  breadCrumbList.classList.toggle('is-moved');
+  // set isOpen Boolean
+  isOpen = !isOpen;
+  // focus on search
+  if (isOpen) {
+    searchField.focus();
+  } else {
+    searchField.blur();
+  }
+}
+
+const curoToggle = document.querySelector('.js-curo .icon');
+curoToggle.addEventListener('click', e => {
+  toggleCuro();
+});
+
+function toggleCuro() {
+  const main = document.querySelector('.js-curo');
+  const items = document.querySelectorAll('.d-1');
+  // highlight main element
+  main.classList.toggle('is-open');
+  // show items
+  items.forEach(el => el.classList.toggle('is-showing'));
+  // set isOpen Boolean
+  curoShowing = !curoShowing;
+}
+
+const gcToggle = document.querySelector('.js-gc .icon');
+gcToggle.addEventListener('click', e => {
+  toggleGc();
+});
+
+function toggleGc() {
+  const main = document.querySelector('.js-gc');
+  const items = document.querySelectorAll('.d-2');
+  // highlight main element
+  main.classList.toggle('is-open');
+  // show items
+  items.forEach(el => el.classList.toggle('is-showing'));
+  // set isOpen Boolean
+  gcShowing = !gcShowing;
+}
+
+const gcnlToggle = document.querySelector('.js-gcnl .icon');
+gcnlToggle.addEventListener('click', e => {
+  toggleGcnl();
+});
+
+function toggleGcnl() {
+  const main = document.querySelector('.js-gcnl');
+  const items = document.querySelectorAll('.d-3');
+  // highlight main element
+  main.classList.toggle('is-open');
+  // show items
+  items.forEach(el => el.classList.toggle('is-showing'));
+  // set isOpen Boolean
+  gcnlShowing = !gcnlShowing;
+}
+
+const gceduToggle = document.querySelector('.js-gcedu .icon');
+gceduToggle.addEventListener('click', e => {
+  toggleGcedu();
+});
+
+function toggleGcedu() {
+  const main = document.querySelector('.js-gcedu');
+  const items = document.querySelectorAll('.d-4');
+  // highlight main element
+  main.classList.toggle('is-open');
+  // show items
+  items.forEach(el => el.classList.toggle('is-showing'));
+  // set isOpen Boolean
+  gceduShowing = !gceduShowing;
+}
+
+const gctudelftToggle = document.querySelector('.js-gctudelft');
+gctudelftToggle.addEventListener('click', e => {
+  toggleGctudelft();
+});
+
+function toggleGctudelft() {
+  toggleSidebar();
+}
